@@ -1,0 +1,49 @@
+# Laravel & Composer
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.backup
+.env.*
+!.env.example
+
+# Laravel storage & framework
+/storage/*.key
+/storage/logs/
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/testing/
+/storage/framework/views/
+/public/storage
+/public/hot
+/public/build/
+
+# Media & large archives (unapproved)
+*.mp4
+*.mov
+*.avi
+*.wmv
+*.zip
+*.tar.gz
+*.rar
+
+# Logs & databases
+*.log
+*.sqlite
+*.sqlite3
+
+# IDE & OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Testing & Tools
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
