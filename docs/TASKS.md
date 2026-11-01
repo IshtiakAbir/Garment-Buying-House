@@ -2,7 +2,7 @@
 
 ## Phase 0: Discovery & Brand Assets
 - [ ] **T-01**: Collect Ventera official logo (SVG/PNG) and brand colors.
-- [ ] **T-02**: Collect verified company credentials, address, contact info, and legal facts.
+- [x] **T-02**: Design system + public layout + home page skeleton (Blade components, tokens, self-hosted fonts, GSAP motion).
 - [ ] **T-03**: Gather initial media assets (factory photos, product samples, hero video clips).
 - [ ] **T-04**: Verify Hostinger hosting plan requirements (PHP 8.3+, SSH, Composer, MySQL, SSL).
 

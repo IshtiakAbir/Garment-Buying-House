@@ -75,3 +75,22 @@ Ventera/
 | Spacing & Grid | `spacing-container` (1280px), `spacing-section` | `clamp(4rem, 8vw, 7.5rem)` vertical rhythm |
 | Elevation & Shape | `shadow-subtle`, `shadow-card`, `shadow-header` | Soft navy ambient shadows; `rounded-luxury` (6px) |
 
+## Blade UI Components (`resources/views/components/`)
+- `x-header`: Sticky navigation with scroll reduction, desktop nav, and Alpine.js accessible mobile slide-in menu.
+- `x-footer`: Luxury footer with brand story, capabilities, office address, and social links.
+- `x-button`: Versatile CTA button with `primary`, `outline`, `light`, and `navy` variants.
+- `x-section`: Section wrapper with fluid spacing (`normal`, `sm`, `none`) and `white`, `cream`, or `navy` backgrounds.
+- `x-section-title`: Eyebrow, serif heading, and descriptive subtitle wrapper.
+- `x-card`: Image-topped luxury category card with hover zoom and action link.
+- `x-icon-card`: Rounded icon box with title and description for services.
+- `x-stat`: Big serif counter metric with data attributes for GSAP count-up animation.
+- `x-step`: Numbered timeline node for the 8-step sourcing process.
+- `x-cta-banner`: High-contrast navy banner with dual action buttons and ambient lighting glows.
+
+## Frontend JS Modules (`resources/js/`)
+- `app.js`: Root entrypoint orchestrating Alpine.js initialization and Lenis smooth scrolling.
+- `reveal.js`: GSAP & ScrollTrigger scroll reveal animations with `prefers-reduced-motion` detection.
+- `counters.js`: Single-fire GSAP ScrollTrigger numeric count-up animations for key statistics.
+- `header.js`: Header state tracking on scroll for elevation shadow application.
+
+

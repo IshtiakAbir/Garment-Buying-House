@@ -1,38 +1,57 @@
 # Project State — Ventera
 
 ## Current Status
-- Project initialized. Memory files and Git repository configured.
-- Waiting for user approval on environment setup and next tasks.
+- Task **T-02** completed. Design tokens, self-hosted fonts, base layout, 11 Blade components, home page skeleton, GSAP motion, stub routes, and automated tests are implemented and verified.
+- Local PHP 8.3.36 runtime detected via Laragon (`C:\laragon\bin\php\php-8.3.36-Win32-vs16-x64`).
+- Local test suite (`php artisan test`) passing 11/11 tests (23 assertions). Frontend build (`npm run build`) passing.
 
 ## Done
 - [x] Initialized Git repository on branch `main` with remote origin.
-- [x] Moved implementation plan to `docs/PLAN.md` (Commit 1).
-- [x] Created `AGENTS.md`, `.gitignore`, and project memory docs (Commit 2).
-- [x] Checked local machine environment (Git, Node, npm installed; PHP 8.3+, Composer, MySQL pending).
+- [x] Moved implementation plan to `docs/PLAN.md`.
+- [x] Created `AGENTS.md`, `.gitignore`, and project memory docs.
+- [x] Detected local PHP 8.3.36 and Composer 2.10.3 runtime.
+- [x] Configured single-source design tokens in `resources/css/app.css` (Navy, Cream, Copper, fluid typography clamp scales, shadows, spacing).
+- [x] Self-hosted fonts installed via `@fontsource/playfair-display` and `@fontsource/inter`.
+- [x] Created luxury brand SVG logos (`logo.svg`, `logo-light.svg`, `favicon.svg`) in `public/images/brand/`.
+- [x] Created base Blade layout (`resources/views/layouts/app.blade.php`) and `AppLayout` component.
+- [x] Built 10 reusable Blade UI components (`x-header`, `x-footer`, `x-button`, `x-section`, `x-section-title`, `x-card`, `x-icon-card`, `x-stat`, `x-step`, `x-cta-banner`).
+- [x] Built complete 10-section home page skeleton in `resources/views/pages/home.blade.php` with placeholder comments `[TBD]`.
+- [x] Built modular JavaScript motion stack in `resources/js/` (`reveal.js`, `counters.js`, `header.js`, `app.js` with Alpine.js and Lenis smooth scrolling, respecting `prefers-reduced-motion`).
+- [x] Configured named routes (`home`, `about`, `services`, `products`, `process`, `compliance`, `sustainability`, `contact`) with `HomeController` and `PageController`.
+- [x] Created custom styled 404 page in `resources/views/errors/404.blade.php`.
+- [x] Verified responsiveness via browser subagent with desktop and mobile screenshots.
 
 ## In Progress
-- Waiting for user approval on local environment setup before starting Phase 0/1/2.
+- Completed T-02; ready for next phase tasks.
 
 ## Next 3 Steps
-1. User installs PHP 8.3+, Composer, MySQL (or approved bundle e.g. Laravel Herd).
-2. Collect Phase 0 brand & company assets (Logo, brand colors, real company facts, Hostinger plan details).
-3. Start T-01 / Phase 2: Initialize Laravel project with Tailwind, Vite, and database setup.
+1. **T-01**: Collect Ventera official logo (SVG/PNG) and brand color finalization.
+2. **T-03**: Gather authentic media assets (factory photos, certified sample product shots, hero video clip).
+3. **T-04 / T-11**: Set up MySQL database connection & migration baseline for dynamic CMS content.
 
 ## Blockers
-- PHP 8.3+, Composer, and MySQL not yet installed on local machine.
+- None for frontend development. MySQL credentials needed when connecting database models.
 
 ## Files Recently Changed
-- `AGENTS.md`
-- `.gitignore`
-- `docs/PLAN.md`
-- `docs/PROJECT_STATE.md`
+- `resources/css/app.css`
+- `vite.config.js`
+- `package.json`
+- `resources/views/layouts/app.blade.php`
+- `resources/views/components/*`
+- `resources/views/pages/home.blade.php`
+- `resources/views/pages/stub.blade.php`
+- `resources/views/errors/404.blade.php`
+- `resources/js/*`
+- `routes/web.php`
+- `app/Http/Controllers/HomeController.php`
+- `app/Http/Controllers/PageController.php`
+- `tests/Feature/PublicRoutesTest.php`
 - `docs/ARCHITECTURE.md`
+- `docs/PROJECT_STATE.md`
 - `docs/TASKS.md`
-- `docs/DECISIONS.md`
-- `docs/HANDOFF.md`
-- `.agents/workflows/handoff.md`
 
 ## Commands
-- Check git status: `git status`
-- Git log: `git log --oneline -n 5`
-- Handoff: run `/handoff`
+- Dev server: `php artisan serve` & `npm run dev`
+- Assets build: `npm run build`
+- Run tests: `php artisan test`
+- Cache clear: `php artisan optimize:clear`
