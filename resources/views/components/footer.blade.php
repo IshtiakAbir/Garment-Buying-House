@@ -5,7 +5,7 @@
             <!-- Col 1 & 2: Brand Information -->
             <div class="lg:col-span-2 flex flex-col gap-5">
                 <a href="{{ route('home') }}" class="inline-block" aria-label="Triventa Home">
-                    <img src="{{ asset('images/brand/logo.png') }}" alt="Triventa Logo" class="h-10 w-auto bg-white/90 rounded px-2 py-1">
+                    <img src="{{ asset('images/brand/logo.png') }}" alt="Triventa Logo" class="h-16 w-auto bg-white/90 rounded-md px-3 py-1.5">
                 </a>
                 <p class="text-sm text-cream/80 leading-relaxed max-w-sm">
                     Triventa Apparel Sourcing is a premier Bangladesh garment buying house. We partner with global fashion brands, retailers, and importers to deliver reliable sourcing, strict quality control, and ethical manufacturing.
