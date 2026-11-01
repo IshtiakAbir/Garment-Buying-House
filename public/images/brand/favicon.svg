@@ -1,6 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="14" fill="#0B1F33"/>
-  <path d="M18 20L32 46L46 20" stroke="#F5F0E8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M24 31L32 46L40 31" stroke="#C0673B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="32" cy="18" r="3" fill="#C0673B"/>
+  <rect width="64" height="64" rx="14" fill="#1A2D4B"/>
+  <!-- Hanger hook -->
+  <path d="M30 13 L30 9 Q30 5 32 5 Q34 5 34 9 L34 13"
+        stroke="#F5F0E8" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <!-- Hanger shoulders -->
+  <path d="M14 30 L32 13 L50 30"
+        stroke="#F5F0E8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- T-letter top bar -->
+  <rect x="12" y="28" width="40" height="6" rx="1" fill="#F5F0E8"/>
+  <!-- T-letter stem -->
+  <rect x="26" y="34" width="12" height="20" fill="#F5F0E8"/>
+  <!-- T-letter bottom serifs -->
+  <rect x="20" y="52" width="24" height="5" rx="1" fill="#F5F0E8"/>
+  <!-- Golden swoosh -->
+  <path d="M24 38 C30 31 46 29 56 36 C60 39 55 45 48 43 C38 40 28 43 24 38 Z"
+        fill="#C9A23E"/>
+  <path d="M28 40 C33 36 43 34 50 38 C53 40 50 43 45 42 C38 41 31 42 28 40 Z"
+        fill="#D4B35C" opacity="0.5"/>
 </svg>

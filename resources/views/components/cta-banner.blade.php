@@ -1,6 +1,6 @@
 @props([
     'headline' => 'Ready to Start Your Next Apparel Collection?',
-    'subline' => 'Partner with Ventera for transparent pricing, vetted compliant factories, and dedicated merchandising in Bangladesh.',
+    'subline' => 'Partner with Triventa for transparent pricing, vetted compliant factories, and dedicated merchandising in Bangladesh.',
     'buttonText' => 'Request a Quote',
     'buttonLink' => null,
     'secondaryText' => 'Explore Sourcing Process',
@@ -19,7 +19,7 @@
 
     <div class="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
         <span class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-copper-light mb-4">
-            Connect With Ventera
+            Connect With Triventa
         </span>
 
         <h2 class="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-5 leading-tight">

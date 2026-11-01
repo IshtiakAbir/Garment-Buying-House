@@ -1,5 +1,5 @@
 /* ==========================================================================
-   VENTERA DESIGN SYSTEM & TOKENS
+   TRIVENTA APPAREL SOURCING — DESIGN SYSTEM & TOKENS
    All brand tokens (colors, fonts, fluid type scales, spacing) defined in this single file.
    ========================================================================== */
 
@@ -26,19 +26,19 @@
 /* 3. Theme Configuration */
 @theme {
     /* Color Palette */
-    --color-navy-dark: #071421;
-    --color-navy: #0B1F33;
-    --color-navy-light: #16324F;
-    --color-navy-soft: #1F4063;
+    --color-navy-dark: #0F1E33;
+    --color-navy: #1A2D4B;
+    --color-navy-light: #263D5C;
+    --color-navy-soft: #2E4D6E;
 
     --color-cream-light: #FAF7F2;
     --color-cream: #F5F0E8;
     --color-cream-dark: #EAE2D5;
 
-    --color-copper-dark: #A45229;
-    --color-copper: #C0673B;
-    --color-copper-light: #D87B4E;
-    --color-copper-soft: #FDF4ED;
+    --color-copper-dark: #A8832F;
+    --color-copper: #C9A23E;
+    --color-copper-light: #D4B35C;
+    --color-copper-soft: #FDF6E8;
 
     --color-charcoal: #1E1E1E;
     --color-charcoal-soft: #2C2C2C;
@@ -67,10 +67,10 @@
     --spacing-section-sm: clamp(2.5rem, 5vw, 4rem);
 
     /* Shadows */
-    --shadow-subtle: 0 2px 10px rgba(11, 31, 51, 0.04);
-    --shadow-card: 0 10px 30px -10px rgba(11, 31, 51, 0.08);
-    --shadow-elevated: 0 20px 40px -15px rgba(11, 31, 51, 0.12);
-    --shadow-header: 0 4px 20px rgba(11, 31, 51, 0.06);
+    --shadow-subtle: 0 2px 10px rgba(26, 45, 75, 0.04);
+    --shadow-card: 0 10px 30px -10px rgba(26, 45, 75, 0.08);
+    --shadow-elevated: 0 20px 40px -15px rgba(26, 45, 75, 0.12);
+    --shadow-header: 0 4px 20px rgba(26, 45, 75, 0.06);
 
     /* Border Radius */
     --radius-luxury: 0.375rem;
@@ -78,9 +78,9 @@
 
 /* 4. Global CSS Variables and Baseline Styles */
 :root {
-    --brand-navy: #0B1F33;
+    --brand-navy: #1A2D4B;
     --brand-cream: #F5F0E8;
-    --brand-copper: #C0673B;
+    --brand-copper: #C9A23E;
     --brand-charcoal: #1E1E1E;
     --brand-muted: #6B7280;
     --brand-success: #2E7D5B;
@@ -119,9 +119,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     background: #F5F0E8;
 }
 ::-webkit-scrollbar-thumb {
-    background: #C0673B;
+    background: #C9A23E;
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #A45229;
+    background: #A8832F;
 }

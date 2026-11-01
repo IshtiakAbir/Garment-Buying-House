@@ -17,7 +17,7 @@ final class PublicRoutesTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
-        $response->assertSee('Ventera');
+        $response->assertSee('Triventa');
         $response->assertSee('From Concept to Container');
         $response->assertSee('Request a Quote');
     }
@@ -37,7 +37,7 @@ final class PublicRoutesTest extends TestCase
     public static function publicRoutesProvider(): array
     {
         return [
-            ['/about', 'About Ventera'],
+            ['/about', 'About Triventa Apparel Sourcing'],
             ['/services', 'Sourcing &amp; Manufacturing Services'],
             ['/products', 'Product Categories &amp; Apparel Range'],
             ['/process', 'Our 8-Step Sourcing Process'],

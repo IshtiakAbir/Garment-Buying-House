@@ -1,12 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" fill="none" class="h-10 w-auto">
-  <!-- Monogram Mark -->
-  <g transform="translate(4, 6)">
-    <rect width="44" height="44" rx="6" fill="#16324F"/>
-    <path d="M12 14L22 32L32 14" stroke="#F5F0E8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M16 22L22 32L28 22" stroke="#D87B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="22" cy="13" r="2" fill="#D87B4E"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" fill="none" class="h-10 w-auto">
+  <!-- T-Hanger Monogram Mark (Light version for dark backgrounds) -->
+  <g transform="translate(2, 2)">
+    <!-- Hanger hook -->
+    <path d="M24 9 L24 5.5 Q24 1.5 26 1.5 Q28 1.5 28 5.5 L28 9"
+          stroke="#F5F0E8" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Hanger shoulders -->
+    <path d="M10 24 L26 9 L42 24"
+          stroke="#F5F0E8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- T-letter top bar -->
+    <rect x="8" y="22" width="36" height="5.5" rx="0.5" fill="#F5F0E8"/>
+    <!-- T-letter stem -->
+    <rect x="20.5" y="27.5" width="11" height="20" fill="#F5F0E8"/>
+    <!-- T-letter bottom serifs -->
+    <rect x="14" y="46" width="24" height="5" rx="0.5" fill="#F5F0E8"/>
+    <!-- Golden swoosh ribbon -->
+    <path d="M19 32 C26 26 40 24 50 30 C54 33 50 39 43 37 C34 35 24 37 19 32 Z"
+          fill="#D4B35C"/>
+    <path d="M22 34 C28 30 38 28 46 32 C49 34 46 37 41 36 C34 35 27 36 22 34 Z"
+          fill="#E5C876" opacity="0.5"/>
   </g>
   <!-- Brand Wordmark -->
-  <text x="60" y="33" font-family="'Playfair Display', Georgia, serif" font-size="24" font-weight="700" letter-spacing="2" fill="#F5F0E8">VENTERA</text>
-  <text x="61" y="45" font-family="'Inter', sans-serif" font-size="7.5" font-weight="600" letter-spacing="2.5" fill="#D87B4E">SOURCING PARTNER</text>
+  <text x="58" y="30" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" letter-spacing="3" fill="#F5F0E8">TRIVENTA</text>
+  <!-- Subtitle with decorative lines -->
+  <line x1="58" y1="41" x2="73" y2="41" stroke="#D4B35C" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="77" y="44" font-family="'Inter', sans-serif" font-size="7" font-weight="600" letter-spacing="2.2" fill="#D4B35C">APPAREL SOURCING</text>
+  <line x1="218" y1="41" x2="233" y2="41" stroke="#D4B35C" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

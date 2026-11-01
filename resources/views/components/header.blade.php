@@ -42,9 +42,9 @@
     <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between">
             <!-- Brand Logo -->
-            <a href="{{ route('home') }}" class="flex items-center gap-2 group focus:outline-none" aria-label="Ventera Home">
-                <img src="{{ asset('images/brand/logo.svg') }}" 
-                     alt="Ventera Logo" 
+            <a href="{{ route('home') }}" class="flex items-center gap-2 group focus:outline-none" aria-label="Triventa Home">
+                <img src="{{ asset('images/brand/logo.png') }}" 
+                     alt="Triventa Logo" 
                      class="h-9 md:h-10 w-auto transition-transform duration-200 group-hover:scale-[1.02]">
             </a>
 
@@ -134,7 +134,7 @@
         <!-- Top bar inside mobile overlay -->
         <div class="flex items-center justify-between pb-6 border-b border-navy-light">
             <a href="{{ route('home') }}" @click="closeMobile()" class="flex items-center gap-2">
-                <img src="{{ asset('images/brand/logo-light.svg') }}" alt="Ventera Logo" class="h-8 w-auto">
+                <img src="{{ asset('images/brand/logo.png') }}" alt="Triventa Logo" class="h-8 w-auto bg-white/90 rounded px-2 py-1">
             </a>
             <button 
                 type="button" 
