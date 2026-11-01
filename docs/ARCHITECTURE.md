@@ -62,3 +62,16 @@ Ventera/
 5. Queued `InquiryReceivedAdmin` sent to Ventera sales team.
 6. Queued `InquiryAutoReply` sent to buyer.
 7. Admin manages inquiry status (`new` -> `contacted` -> `quoted` -> `won`/`lost`/`spam`) in Filament.
+
+## Design Tokens (Tailwind & CSS Variables)
+| Category | Token Names | Values / Definitions |
+|---|---|---|
+| Primary Colors | `navy-dark`, `navy`, `navy-light`, `navy-soft` | `#071421`, `#0B1F33`, `#16324F`, `#1F4063` |
+| Accent Colors | `copper-dark`, `copper`, `copper-light`, `copper-soft` | `#A45229`, `#C0673B`, `#D87B4E`, `#FDF4ED` |
+| Neutral Colors | `cream-light`, `cream`, `cream-dark` | `#FAF7F2`, `#F5F0E8`, `#EAE2D5` |
+| Text & Status | `charcoal`, `muted`, `muted-light`, `success` | `#1E1E1E`, `#6B7280`, `#E5E7EB`, `#2E7D5B` |
+| Typography | `font-serif`, `font-sans` | Self-hosted *Playfair Display* & *Inter* |
+| Fluid Type | `text-hero`, `text-h1`, `text-h2`, `text-h3`, `text-body` | `clamp()` fluid scales (2.5-4.25rem, 2-3.25rem, etc.) |
+| Spacing & Grid | `spacing-container` (1280px), `spacing-section` | `clamp(4rem, 8vw, 7.5rem)` vertical rhythm |
+| Elevation & Shape | `shadow-subtle`, `shadow-card`, `shadow-header` | Soft navy ambient shadows; `rounded-luxury` (6px) |
+

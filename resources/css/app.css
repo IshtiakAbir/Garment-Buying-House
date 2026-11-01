@@ -1,0 +1,127 @@
+/* ==========================================================================
+   VENTERA DESIGN SYSTEM & TOKENS
+   All brand tokens (colors, fonts, fluid type scales, spacing) defined in this single file.
+   ========================================================================== */
+
+/* 1. Self-hosted Fonts via @fontsource (Zero external Google Font requests) */
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/400-italic.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+/* 2. Tailwind CSS Core */
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+@source '../js/**/*.js';
+
+/* 3. Theme Configuration */
+@theme {
+    /* Color Palette */
+    --color-navy-dark: #071421;
+    --color-navy: #0B1F33;
+    --color-navy-light: #16324F;
+    --color-navy-soft: #1F4063;
+
+    --color-cream-light: #FAF7F2;
+    --color-cream: #F5F0E8;
+    --color-cream-dark: #EAE2D5;
+
+    --color-copper-dark: #A45229;
+    --color-copper: #C0673B;
+    --color-copper-light: #D87B4E;
+    --color-copper-soft: #FDF4ED;
+
+    --color-charcoal: #1E1E1E;
+    --color-charcoal-soft: #2C2C2C;
+    --color-muted: #6B7280;
+    --color-muted-light: #E5E7EB;
+
+    --color-success: #2E7D5B;
+    --color-success-light: #E8F5EE;
+
+    /* Typography Families with Safe Fallbacks */
+    --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    /* Fluid Type Scale using clamp() */
+    --text-hero: clamp(2.5rem, 5vw + 1rem, 4.25rem);
+    --text-h1: clamp(2rem, 3.5vw + 1rem, 3.25rem);
+    --text-h2: clamp(1.625rem, 2.5vw + 0.75rem, 2.375rem);
+    --text-h3: clamp(1.25rem, 1.5vw + 0.75rem, 1.75rem);
+    --text-body: clamp(1rem, 0.25vw + 0.95rem, 1.125rem);
+    --text-small: clamp(0.8125rem, 0.2vw + 0.75rem, 0.875rem);
+    --text-eyebrow: clamp(0.75rem, 0.2vw + 0.7rem, 0.8125rem);
+
+    /* Dimensions & Spacing */
+    --spacing-container: 80rem; /* 1280px */
+    --spacing-section: clamp(4rem, 8vw, 7.5rem);
+    --spacing-section-sm: clamp(2.5rem, 5vw, 4rem);
+
+    /* Shadows */
+    --shadow-subtle: 0 2px 10px rgba(11, 31, 51, 0.04);
+    --shadow-card: 0 10px 30px -10px rgba(11, 31, 51, 0.08);
+    --shadow-elevated: 0 20px 40px -15px rgba(11, 31, 51, 0.12);
+    --shadow-header: 0 4px 20px rgba(11, 31, 51, 0.06);
+
+    /* Border Radius */
+    --radius-luxury: 0.375rem;
+}
+
+/* 4. Global CSS Variables and Baseline Styles */
+:root {
+    --brand-navy: #0B1F33;
+    --brand-cream: #F5F0E8;
+    --brand-copper: #C0673B;
+    --brand-charcoal: #1E1E1E;
+    --brand-muted: #6B7280;
+    --brand-success: #2E7D5B;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: var(--color-charcoal);
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessibility: Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Focus styles for keyboard accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--color-copper);
+    outline-offset: 3px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F5F0E8;
+}
+::-webkit-scrollbar-thumb {
+    background: #C0673B;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #A45229;
+}
