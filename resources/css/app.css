@@ -62,7 +62,8 @@
     --text-eyebrow: clamp(0.75rem, 0.2vw + 0.7rem, 0.8125rem);
 
     /* Dimensions & Spacing */
-    --spacing-container: 80rem; /* 1280px */
+    --spacing-container: 80rem;
+    /* 1280px */
     --spacing-section: clamp(4rem, 8vw, 7.5rem);
     --spacing-section-sm: clamp(2.5rem, 5vw, 4rem);
 
@@ -97,7 +98,10 @@ html {
 
 /* Accessibility: Respect Reduced Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
-    *, ::before, ::after {
+
+    *,
+    ::before,
+    ::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
@@ -106,7 +110,11 @@ html {
 }
 
 /* Focus styles for keyboard accessibility */
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
     outline: 2px solid var(--color-copper);
     outline-offset: 3px;
 }
@@ -115,13 +123,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: #F5F0E8;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #C9A23E;
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #A8832F;
 }
