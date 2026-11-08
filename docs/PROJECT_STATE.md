@@ -1,7 +1,7 @@
 # Project State — Triventa Apparel Sourcing
 
 ## Current Status
-- Task **T-41-DEMO** completed. Multi-stage Dockerfile (Node 22 + PHP 8.3-FPM + Nginx), Supervisor, dynamic PORT binding, storage symlinks, trusted proxy support, external MySQL config, and Render deployment guide implemented and pushed to `origin main`.
+- Task **T-41-DEMO** completed & verified live. Render deployment live at `https://trivant-apparel-sourcing.onrender.com` returning HTTP 200 OK across all routes (`/`, `/up`, `/about`, `/services`, `/products`, `/process`, `/compliance`, `/sustainability`, `/contact`), brand logo PNG, and Vite CSS/JS assets.
 - Task **T-02** completed. Design tokens, self-hosted fonts, base layout, 11 Blade components, home page skeleton, GSAP motion, stub routes, and automated tests are implemented and verified.
 - Task **T-01 (partial)**: Rebranded from "Ventera" to "Triventa Apparel Sourcing" — user's original logo PNG deployed, all 27+ text references updated, design token colors updated (navy `#1A2D4B`, gold `#C9A23E`), tests passing 9/9.
 - Local PHP 8.3.36 runtime detected via Laragon (`C:\laragon\bin\php\php-8.3.36-Win32-vs16-x64`).
