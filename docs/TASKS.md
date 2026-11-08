@@ -59,6 +59,7 @@
 - [ ] **T-40**: Run Lighthouse audit to achieve 90+ desktop and 80+ mobile performance scores.
 
 ## Phase 9: Staging Review
+- [x] **T-41-DEMO**: Prepare Docker, Nginx, and Render deployment for client demonstration with external MySQL compatibility.
 - [ ] **T-41**: Deploy application to Hostinger staging environment.
 - [ ] **T-42**: Execute client review feedback rounds and issue fixes.
 

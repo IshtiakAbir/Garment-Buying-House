@@ -1,0 +1,43 @@
+# Version control
+.git
+.github
+
+# Environment & Credentials (NEVER bake these into the container!)
+.env
+.env.*
+!.env.example
+
+# Local development files & vendor
+node_modules
+npm-debug.log
+yarn-error.log
+/vendor
+
+# Storage & Cache
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/public/storage
+/public/hot
+
+# Tests & Docs
+/tests
+/docs
+phpunit.xml
+.phpunit.result.cache
+
+# IDE & System Files
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Docker & local configs
+Dockerfile*
+docker-compose*
+.dockerignore
+

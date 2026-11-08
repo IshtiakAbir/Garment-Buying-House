@@ -22,6 +22,7 @@
 - [x] Configured named routes (`home`, `about`, `services`, `products`, `process`, `compliance`, `sustainability`, `contact`) with `HomeController` and `PageController`.
 - [x] Created custom styled 404 page in `resources/views/errors/404.blade.php`.
 - [x] Verified responsiveness via browser subagent with desktop and mobile screenshots.
+- [x] Prepared production Dockerfile, Nginx web server, entrypoint script, and Render configuration for external MySQL client demonstration.
 
 ## In Progress
 - Completed T-02 and T-01 brand rebrand; ready for next phase tasks.
@@ -35,6 +36,17 @@
 - None for frontend development. MySQL credentials needed when connecting database models.
 
 ## Files Recently Changed
+- `Dockerfile`
+- `.dockerignore`
+- `docker/nginx.conf`
+- `docker/supervisord.conf`
+- `docker/entrypoint.sh`
+- `docker/php/opcache.ini`
+- `render.yaml`
+- `.env.render.example`
+- `docs/RENDER_DEPLOYMENT.md`
+- `bootstrap/app.php`
+- `.gitignore`
 - `resources/css/app.css`
 - `vite.config.js`
 - `package.json`

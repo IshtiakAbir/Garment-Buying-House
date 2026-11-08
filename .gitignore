@@ -9,6 +9,7 @@ yarn-error.log
 .env.backup
 .env.*
 !.env.example
+!.env.render.example
 
 # Laravel storage & framework
 /storage/*.key
