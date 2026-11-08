@@ -1,6 +1,6 @@
 <x-app-layout>
-    <x-slot:title>Triventa Apparel Sourcing — Garment Buying House & Apparel Sourcing Partner</x-slot:title>
-    <x-slot:description>Triventa connects international fashion brands and retailers with vetted Bangladesh garment manufacturers, strict QA, and transparent sourcing.</x-slot:description>
+    <x-slot:title>Trivant Apparel Sourcing — Garment Buying House & Apparel Sourcing Partner</x-slot:title>
+    <x-slot:description>Trivant connects international fashion brands and retailers with vetted Bangladesh garment manufacturers, strict QA, and transparent sourcing.</x-slot:description>
 
     {{-- =========================================================================
          1. HERO SECTION (Full Screen with Dark Navy Gradient + Video Architecture)
@@ -22,8 +22,8 @@
              }">
         <!-- Video Background Architecture (Controlled via config; fallback CSS poster gradient) -->
         <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-            {{-- [TBD]: Once real 10s hero video (fabric -> cutting -> sewing -> packing) is produced, enable config('triventa.hero_video_enabled') --}}
-            @if(config('triventa.hero_video_enabled', false))
+            {{-- [TBD]: Once real 10s hero video (fabric -> cutting -> sewing -> packing) is produced, enable config('trivant.hero_video_enabled') --}}
+            @if(config('trivant.hero_video_enabled', false))
                 <video x-ref="heroVideo" 
                        autoplay muted loop playsinline preload="metadata" 
                        class="absolute inset-0 w-full h-full object-cover">
@@ -53,7 +53,7 @@
             </h1>
 
             <p class="text-base sm:text-lg md:text-xl text-cream/85 font-normal max-w-2xl leading-relaxed mb-10">
-                Triventa helps global fashion brands, retailers, and importers manufacture high-quality knitwear, woven garments, and denim with verified factory partners, clear pricing, and strict QA.
+                Trivant helps global fashion brands, retailers, and importers manufacture high-quality knitwear, woven garments, and denim with verified factory partners, clear pricing, and strict QA.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center gap-4 justify-center w-full sm:w-auto">
@@ -67,7 +67,7 @@
         </div>
 
         <!-- Video Play/Pause Control (Accessibility requirement) -->
-        @if(config('triventa.hero_video_enabled', false))
+        @if(config('trivant.hero_video_enabled', false))
             <button type="button" 
                     @click="toggleVideo()" 
                     class="absolute bottom-6 right-6 z-20 p-2.5 rounded-full bg-navy/80 hover:bg-copper text-white/80 hover:text-white border border-navy-light backdrop-blur-sm transition-colors"
@@ -113,14 +113,14 @@
             <!-- Left Editorial Text -->
             <div class="lg:col-span-7 flex flex-col items-start reveal-item">
                 <span class="text-xs sm:text-sm font-semibold tracking-widest uppercase text-copper mb-3">
-                    About Triventa
+                    About Trivant
                 </span>
                 <h2 class="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-navy tracking-tight leading-snug mb-6">
                     A Dependable Buying House Connecting Global Retailers With Bangladesh’s Finest Apparel Mills.
                 </h2>
                 <div class="space-y-4 text-muted text-base leading-relaxed mb-8">
                     <p>
-                        Triventa Apparel Sourcing is a Bangladesh-based garment buying house. We help international fashion brands, retailers, and importers turn design ideas into finished products, with trusted factory partners, clear pricing, and strict quality control.
+                        Trivant Apparel Sourcing is a Bangladesh-based garment buying house. We help international fashion brands, retailers, and importers turn design ideas into finished products, with trusted factory partners, clear pricing, and strict quality control.
                     </p>
                     <p>
                         Our mission is to deliver value-driven sourcing through strong supplier relationships, rigorous technical supervision, and transparent customer-first service from yarn selection to vessel loading.
@@ -452,11 +452,11 @@
     </x-section>
 
     {{-- =========================================================================
-         8. WHY TRIVENTA (6 Benefit Blocks from Plan Section 7)
+         8. WHY TRIVANT (6 Benefit Blocks from Plan Section 7)
          ========================================================================= --}}
     <x-section background="white" spacing="normal">
         <x-section-title 
-            eyebrow="Why Triventa"
+            eyebrow="Why Trivant"
             heading="Why International Buyers Choose Our Desk"
             intro="We blend local Bangladeshi manufacturing power with European business communication and uncompromising standards."
             align="center"
@@ -525,7 +525,7 @@
                 Verified Social & Environmental Compliance
             </h2>
             <p class="text-sm sm:text-base text-muted leading-relaxed mb-6 max-w-2xl">
-                We believe in ethical fashion manufacturing. Triventa works exclusively with partner mills that maintain verified social compliance, fair living wages, safe working environments, and responsible effluent treatment. Real certificate documentation (BSCI, OEKO-TEX, SEDEX) is verified order-by-order.
+                We believe in ethical fashion manufacturing. Trivant works exclusively with partner mills that maintain verified social compliance, fair living wages, safe working environments, and responsible effluent treatment. Real certificate documentation (BSCI, OEKO-TEX, SEDEX) is verified order-by-order.
             </p>
             <div class="flex items-center gap-4">
                 <a href="{{ route('compliance') }}" class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-copper hover:text-copper-dark transition-colors inline-flex items-center gap-1.5">

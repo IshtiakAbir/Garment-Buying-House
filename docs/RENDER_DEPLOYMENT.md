@@ -1,4 +1,4 @@
-# Render Deployment Guide: Triventa Apparel Sourcing
+# Render Deployment Guide: Trivant Apparel Sourcing
 
 This guide provides instructions for deploying this Laravel 12/13 application to [Render](https://render.com) using Docker and an external MySQL database for client demonstrations.
 
@@ -27,7 +27,7 @@ Render's free hosting tier does **not** include managed MySQL (it only offers Po
 4. Note your database credentials:
    - Host: e.g. `sql123.hostinger.com` (or your server IP)
    - Port: `3306`
-   - Database name: e.g. `u123456789_triventa`
+   - Database name: e.g. `u123456789_trivant`
    - Username: e.g. `u123456789_admin`
    - Password: `your-secure-password`
 
@@ -55,7 +55,7 @@ git push origin main
 2. Click **New +** and select **Web Service**.
 3. Connect your GitHub repository (`Trivant`).
 4. Fill in the deployment details:
-   - **Name**: `triventa-apparel` (or your chosen name)
+   - **Name**: `trivant-apparel` (or your chosen name)
    - **Region**: Choose the region closest to your clients (e.g. Frankfurt, Singapore, Oregon).
    - **Branch**: `main`
    - **Root Directory**: *(leave blank)*
@@ -70,7 +70,7 @@ In your Render Web Service dashboard, navigate to **Environment** > **Environmen
 
 | Environment Variable | Recommended Value | Description |
 | :--- | :--- | :--- |
-| `APP_NAME` | `Triventa Apparel Sourcing` | Brand name |
+| `APP_NAME` | `Trivant Apparel Sourcing` | Brand name |
 | `APP_ENV` | `production` | Production environment mode |
 | `APP_DEBUG` | `false` | Disables stack traces for client demonstration |
 | `APP_KEY` | `base64:...` *(Generate with `php artisan key:generate --show`)* | 32-character AES encryption key |

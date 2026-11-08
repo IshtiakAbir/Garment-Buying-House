@@ -15,7 +15,7 @@ final class PageController extends Controller
     {
         $pages = [
             'about' => [
-                'title' => 'About Triventa Apparel Sourcing',
+                'title' => 'About Trivant Apparel Sourcing',
                 'eyebrow' => 'Our Company',
                 'description' => 'Learn more about our heritage, mission, executive leadership, and Bangladesh garment sourcing capabilities.',
             ],
@@ -53,7 +53,7 @@ final class PageController extends Controller
 
         $pageData = $pages[$page] ?? [
             'title' => ucwords(str_replace('-', ' ', $page)),
-            'eyebrow' => 'Triventa Sourcing',
+            'eyebrow' => 'Trivant Sourcing',
             'description' => 'This section is currently being prepared with authenticated details from our Dhaka team.',
         ];
 

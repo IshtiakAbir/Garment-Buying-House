@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes — Triventa Apparel Sourcing Public Website
+| Web Routes — Trivant Apparel Sourcing Public Website
 |--------------------------------------------------------------------------
 | Clean, named routes connecting to Controllers without dead links.
 */

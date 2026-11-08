@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: triventa-apparel-sourcing
+    name: trivant-apparel-sourcing
     runtime: docker
     plan: free
     branch: main
@@ -8,7 +8,7 @@ services:
     healthCheckPath: /up
     envVars:
       - key: APP_NAME
-        value: "Triventa Apparel Sourcing"
+        value: "Trivant Apparel Sourcing"
       - key: APP_ENV
         value: production
       - key: APP_DEBUG

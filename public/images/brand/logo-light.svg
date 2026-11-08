@@ -20,7 +20,7 @@
           fill="#E5C876" opacity="0.5"/>
   </g>
   <!-- Brand Wordmark -->
-  <text x="58" y="30" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" letter-spacing="3" fill="#F5F0E8">TRIVENTA</text>
+  <text x="58" y="30" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" letter-spacing="3" fill="#F5F0E8">TRIVANT</text>
   <!-- Subtitle with decorative lines -->
   <line x1="58" y1="41" x2="73" y2="41" stroke="#D4B35C" stroke-width="1.2" stroke-linecap="round"/>
   <text x="77" y="44" font-family="'Inter', sans-serif" font-size="7" font-weight="600" letter-spacing="2.2" fill="#D4B35C">APPAREL SOURCING</text>

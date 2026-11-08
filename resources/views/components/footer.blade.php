@@ -4,11 +4,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-navy-light/60">
             <!-- Col 1 & 2: Brand Information -->
             <div class="lg:col-span-2 flex flex-col gap-5">
-                <a href="{{ route('home') }}" class="inline-block" aria-label="Triventa Home">
-                    <img src="{{ asset('images/brand/logo.png') }}" alt="Triventa Logo" class="h-16 w-auto bg-white/90 rounded-md px-3 py-1.5">
+                <a href="{{ route('home') }}" class="inline-block" aria-label="Trivant Home">
+                    <img src="{{ asset('images/brand/logo.png') }}" alt="Trivant Logo" class="h-16 w-auto bg-white/90 rounded-md px-3 py-1.5">
                 </a>
                 <p class="text-sm text-cream/80 leading-relaxed max-w-sm">
-                    Triventa Apparel Sourcing is a premier Bangladesh garment buying house. We partner with global fashion brands, retailers, and importers to deliver reliable sourcing, strict quality control, and ethical manufacturing.
+                    Trivant Apparel Sourcing is a premier Bangladesh garment buying house. We partner with global fashion brands, retailers, and importers to deliver reliable sourcing, strict quality control, and ethical manufacturing.
                 </p>
                 <div class="flex items-center gap-3 pt-2">
                     <!-- LinkedIn Placeholder Icon -->
@@ -24,7 +24,7 @@
                         </svg>
                     </a>
                     <!-- Email Direct Icon -->
-                    <a href="mailto:contact@triventa.com" class="w-9 h-9 rounded bg-navy-light/80 hover:bg-copper text-cream hover:text-white flex items-center justify-center transition-colors" aria-label="Email Inquiry">
+                    <a href="mailto:contact@trivant.com" class="w-9 h-9 rounded bg-navy-light/80 hover:bg-copper text-cream hover:text-white flex items-center justify-center transition-colors" aria-label="Email Inquiry">
                         <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                         </svg>
@@ -64,11 +64,11 @@
                 <div class="flex flex-col gap-2.5 text-sm text-cream/75">
                     <p class="leading-relaxed">
                         House #00, Road #00, Sector #0, Uttara, Dhaka-1230, Bangladesh
-                        <!-- [TBD]: Replace with official Triventa verified office address -->
+                        <!-- [TBD]: Replace with official Trivant verified office address -->
                     </p>
                     <p class="pt-1">
                         <span class="block text-xs uppercase tracking-wider text-muted">Email</span>
-                        <a href="mailto:info@triventa-sourcing.com" class="text-cream hover:text-copper transition-colors">info@triventa-sourcing.com</a>
+                        <a href="mailto:info@trivant-sourcing.com" class="text-cream hover:text-copper transition-colors">info@trivant-sourcing.com</a>
                     </p>
                     <p>
                         <span class="block text-xs uppercase tracking-wider text-muted">Phone / WhatsApp</span>
@@ -80,7 +80,7 @@
 
         <!-- Bottom Copyright & Meta Bar -->
         <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/60">
-            <p>&copy; {{ date('Y') }} Triventa Apparel Sourcing. All rights reserved. Registered Garment Buying House, Bangladesh.</p>
+            <p>&copy; {{ date('Y') }} Trivant Apparel Sourcing. All rights reserved. Registered Garment Buying House, Bangladesh.</p>
             <div class="flex items-center gap-6">
                 <a href="#" class="hover:text-cream transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-cream transition-colors">Terms of Service</a>
