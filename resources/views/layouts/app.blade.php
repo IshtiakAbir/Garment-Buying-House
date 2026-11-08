@@ -19,7 +19,7 @@
         content="{{ isset($title) ? $title . ' — Trivant' : 'Trivant — Garment Buying House & Sourcing Partner' }}">
     <meta property="og:description"
         content="{{ $description ?? 'Premium apparel sourcing from Bangladesh for international fashion brands, retailers, and importers.' }}">
-    <meta property="og:image" content="{{ asset('images/brand/logo.png') }}">
+    <meta property="og:image" content="{{ asset('images/brand/logo-trivant.png') }}?v=2">
     <meta property="og:site_name" content="Trivant Apparel Sourcing">
 
     <!-- Twitter -->
@@ -28,10 +28,10 @@
         content="{{ isset($title) ? $title . ' — Trivant' : 'Trivant — Garment Buying House & Sourcing Partner' }}">
     <meta name="twitter:description"
         content="{{ $description ?? 'Premium apparel sourcing from Bangladesh for international fashion brands, retailers, and importers.' }}">
-    <meta name="twitter:image" content="{{ asset('images/brand/logo.png') }}">
+    <meta name="twitter:image" content="{{ asset('images/brand/logo-trivant.png') }}?v=2">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="{{ asset('images/brand/favicon.svg') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/brand/favicon.svg') }}?v=2">
 
     <!-- Vite Assets -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
