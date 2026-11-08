@@ -35,12 +35,14 @@ RUN apk add --no-cache \
     freetype-dev \
     libzip-dev \
     oniguruma-dev \
-    icu-dev
+    icu-dev \
+    sqlite-dev
 
-# Configure and install required PHP extensions
+# Configure and install required PHP extensions (MySQL + SQLite fallback + core extensions)
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) \
         pdo_mysql \
+        pdo_sqlite \
         mbstring \
         bcmath \
         zip \
@@ -76,6 +78,17 @@ COPY --from=frontend-builder /app/public/build ./public/build
 # Complete Composer autoloader optimization
 RUN composer dump-autoload --optimize --no-dev
 
+# Ensure all storage, cache, and database directories exist in the build image
+RUN mkdir -p \
+    storage/app/public \
+    storage/framework/cache/data \
+    storage/framework/sessions \
+    storage/framework/views \
+    storage/logs \
+    bootstrap/cache \
+    database \
+    && touch database/database.sqlite
+
 # Configure Nginx, Supervisor, and Entrypoint
 COPY docker/nginx.conf /etc/nginx/http.d/default.conf
 COPY docker/supervisord.conf /etc/supervisord.conf
@@ -87,11 +100,10 @@ RUN sed -i 's/\r$//' /entrypoint.sh \
 
 # Set correct ownership and permissions for Laravel writable directories
 RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
 
 # Expose Render default port (Render will map to $PORT)
 EXPOSE 10000
 
 # Run entrypoint
 ENTRYPOINT ["/entrypoint.sh"]
-
