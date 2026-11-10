@@ -3,86 +3,100 @@
     <x-slot:description>Trivant connects international fashion brands and retailers with vetted Bangladesh garment manufacturers, strict QA, and transparent sourcing.</x-slot:description>
 
     {{-- =========================================================================
-         1. HERO SECTION (Full Screen with Dark Navy Gradient + Video Architecture)
+         1. HERO SECTION — Animated Fabric Fan Loop (CSS-only, no video file needed)
          ========================================================================= --}}
-    <section class="relative min-h-[92vh] flex items-center justify-center bg-navy text-white overflow-hidden py-20 px-4 sm:px-6 lg:px-8"
-             x-data="{ 
-                 videoPlaying: true,
-                 toggleVideo() {
-                     const video = this.$refs.heroVideo;
-                     if (!video) return;
-                     if (video.paused) {
-                         video.play();
-                         this.videoPlaying = true;
-                     } else {
-                         video.pause();
-                         this.videoPlaying = false;
-                     }
-                 }
-             }">
-        <!-- Video Background Architecture (Controlled via config; fallback CSS poster gradient) -->
-        <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-            {{-- [TBD]: Once real 10s hero video (fabric -> cutting -> sewing -> packing) is produced, enable config('trivant.hero_video_enabled') --}}
-            @if(config('trivant.hero_video_enabled', false))
-                <video x-ref="heroVideo" 
-                       autoplay muted loop playsinline preload="metadata" 
-                       class="absolute inset-0 w-full h-full object-cover">
-                    <source src="{{ asset('videos/hero.webm') }}" type="video/webm">
-                    <source src="{{ asset('videos/hero.mp4') }}" type="video/mp4">
-                </video>
-            @else
-                <!-- High-Fidelity Editorial CSS Fallback Poster with Luxury Fabric Texture Simulation -->
-                <div class="absolute inset-0 bg-gradient-to-br from-navy-dark via-navy to-navy-light opacity-95"></div>
-                <div class="absolute inset-0 bg-[radial-gradient(#C9A23E_1px,transparent_1px)] [background-size:32px_32px] opacity-10"></div>
-            @endif
+    <section class="relative min-h-[92vh] flex items-center justify-center bg-navy text-white overflow-hidden"
+             style="background: radial-gradient(120% 90% at 70% 100%, #27406e 0%, #1A2D4B 60%), #1A2D4B;"
+             aria-label="Hero">
 
-            <!-- Dark Gradient Vignette for Readability (WCAG AA Compliance) -->
-            <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-navy/50"></div>
+        {{-- ── Woven texture overlay ── --}}
+        <div class="hero-texture absolute inset-0 z-0 pointer-events-none" aria-hidden="true"></div>
+
+        {{-- ── Radial vignette for left-side text legibility ── --}}
+        <div class="absolute inset-0 z-0 pointer-events-none"
+             style="background: radial-gradient(ellipse 60% 100% at 20% 50%, rgba(26,45,75,0.72) 0%, transparent 80%);"
+             aria-hidden="true"></div>
+
+        {{-- ── Animated Fabric-Swatch Fan (right side) ── --}}
+        <div class="hero-fan" aria-hidden="true">
+            {{-- sage green --}}
+            <div class="hero-card" style="--card-index:0; --card-angle:-62deg; --card-color:#8FA58A;"></div>
+            {{-- saffron / copper --}}
+            <div class="hero-card" style="--card-index:1; --card-angle:-41deg; --card-color:#C9A23E;"></div>
+            {{-- dusty rose --}}
+            <div class="hero-card" style="--card-index:2; --card-angle:-20deg; --card-color:#C4757A;"></div>
+            {{-- linen cream --}}
+            <div class="hero-card" style="--card-index:3; --card-angle:0deg;   --card-color:#E6DFD0;"></div>
+            {{-- steel blue --}}
+            <div class="hero-card" style="--card-index:4; --card-angle:20deg;  --card-color:#4F6FA8;"></div>
+            {{-- teal --}}
+            <div class="hero-card" style="--card-index:5; --card-angle:41deg;  --card-color:#6E8F86;"></div>
+            {{-- terracotta --}}
+            <div class="hero-card" style="--card-index:6; --card-angle:62deg;  --card-color:#B9622F;"></div>
         </div>
 
-        <!-- Hero Content Box -->
-        <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center pt-8 pb-12 reveal-item">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-light/80 border border-copper/30 text-xs sm:text-sm font-semibold uppercase tracking-widest text-copper-light mb-6 backdrop-blur-sm">
-                <span class="w-1.5 h-1.5 rounded-full bg-copper animate-pulse"></span>
-                International Garment Sourcing Partner · Bangladesh
-            </span>
+        {{-- ── Running stitch SVG ── --}}
+        <svg class="hero-stitch" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 70 C 150 10, 300 110, 450 60 S 750 10, 900 65 S 1100 100, 1200 50"/>
+        </svg>
 
-            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold tracking-tight text-white leading-[1.12] mb-6">
-                From Concept to Container. <br class="hidden sm:inline">
-                <span class="text-cream italic font-normal">Trusted Apparel Sourcing.</span>
-            </h1>
+        {{-- ── Hero Content (left-aligned on desktop, centred on mobile) ── --}}
+        <div class="relative z-10 w-full max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-32">
+            <div class="max-w-xl reveal-item">
 
-            <p class="text-base sm:text-lg md:text-xl text-cream/85 font-normal max-w-2xl leading-relaxed mb-10">
-                Trivant helps global fashion brands, retailers, and importers manufacture high-quality knitwear, woven garments, and denim with verified factory partners, clear pricing, and strict QA.
-            </p>
+                {{-- Eyebrow badge --}}
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-light/80 border border-copper/30 text-xs sm:text-sm font-semibold uppercase tracking-widest text-copper-light mb-8 backdrop-blur-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-copper animate-pulse"></span>
+                    International Garment Sourcing Partner · Bangladesh
+                </span>
 
-            <div class="flex flex-col sm:flex-row items-center gap-4 justify-center w-full sm:w-auto">
-                <x-button href="{{ route('contact') }}" variant="primary" size="lg" class="w-full sm:w-auto">
-                    Request a Quote
-                </x-button>
-                <x-button href="#services" variant="outline" size="lg" class="w-full sm:w-auto border-cream/30 text-cream hover:bg-cream hover:text-navy">
-                    Explore Sourcing Services
-                </x-button>
+                {{-- Cycling word headlines --}}
+                <div class="relative mb-3" style="height: clamp(56px, 11vw, 140px);" aria-live="polite">
+                    <h1 class="hero-word font-serif font-bold text-white leading-none"
+                        style="font-size: clamp(44px, 10vw, 128px); letter-spacing: -0.03em;">
+                        Sourcing
+                        <small class="block mt-2 font-sans font-medium not-italic text-[#8FA58A]"
+                               style="font-size: clamp(13px, 1.6vw, 22px); letter-spacing: 0; opacity: .95;">
+                            Fabrics, trims and factories matched to your brief.
+                        </small>
+                    </h1>
+                    <h1 class="hero-word font-serif font-bold text-white leading-none"
+                        style="font-size: clamp(44px, 10vw, 128px); letter-spacing: -0.03em;">
+                        Sampling
+                        <small class="block mt-2 font-sans font-medium not-italic text-[#8FA58A]"
+                               style="font-size: clamp(13px, 1.6vw, 22px); letter-spacing: 0; opacity: .95;">
+                            From first sketch to approved fit, on schedule.
+                        </small>
+                    </h1>
+                    <h1 class="hero-word font-serif font-bold text-white leading-none"
+                        style="font-size: clamp(44px, 10vw, 128px); letter-spacing: -0.03em;">
+                        Shipping
+                        <small class="block mt-2 font-sans font-medium not-italic text-[#8FA58A]"
+                               style="font-size: clamp(13px, 1.6vw, 22px); letter-spacing: 0; opacity: .95;">
+                            Quality-checked orders delivered to your warehouse.
+                        </small>
+                    </h1>
+                </div>
+
+                {{-- Static sub-headline --}}
+                <p class="text-base sm:text-lg text-cream/80 font-normal max-w-lg leading-relaxed mb-10 mt-8">
+                    Trivant partners with global fashion brands, retailers, and importers — connecting you with vetted Bangladesh manufacturers, transparent pricing, and rigorous QA.
+                </p>
+
+                {{-- CTA Buttons --}}
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <x-button href="{{ route('contact') }}" variant="primary" size="lg" class="w-full sm:w-auto">
+                        Request a Quote
+                    </x-button>
+                    <x-button href="{{ route('services') }}" variant="outline" size="lg" class="w-full sm:w-auto border-cream/30 text-cream hover:bg-cream hover:text-navy">
+                        Explore Services
+                    </x-button>
+                </div>
             </div>
         </div>
 
-        <!-- Video Play/Pause Control (Accessibility requirement) -->
-        @if(config('trivant.hero_video_enabled', false))
-            <button type="button" 
-                    @click="toggleVideo()" 
-                    class="absolute bottom-6 right-6 z-20 p-2.5 rounded-full bg-navy/80 hover:bg-copper text-white/80 hover:text-white border border-navy-light backdrop-blur-sm transition-colors"
-                    :aria-label="videoPlaying ? 'Pause background video' : 'Play background video'">
-                <svg x-show="videoPlaying" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                </svg>
-                <svg x-show="!videoPlaying" x-cloak class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                </svg>
-            </button>
-        @endif
-
-        <!-- Scroll Down Indicator -->
-        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+        {{-- ── Scroll Down Indicator ── --}}
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
             <span class="text-[10px] uppercase tracking-widest text-cream/70 font-semibold">Scroll</span>
             <svg class="w-4 h-4 text-copper animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />

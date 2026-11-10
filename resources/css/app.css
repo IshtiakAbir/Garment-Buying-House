@@ -136,3 +136,125 @@ textarea:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
     background: #A8832F;
 }
+
+/* ==========================================================================
+   HERO LOOP ANIMATION — Fabric Fan + Word Cycle
+   ========================================================================== */
+
+/* Woven texture overlay */
+.hero-texture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .06;
+    background:
+        repeating-linear-gradient(0deg,  #fff 0 1px, transparent 1px 6px),
+        repeating-linear-gradient(90deg, #fff 0 1px, transparent 1px 6px);
+    pointer-events: none;
+}
+
+/* Fan pivot point — anchored bottom-right */
+.hero-fan {
+    position: absolute;
+    right: 8%;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-fan { right: -4%; }
+}
+
+/* Individual fabric swatch cards */
+.hero-card {
+    position: absolute;
+    width: 15vmin;
+    height: 46vmin;
+    left: -7.5vmin;
+    bottom: -6vmin;
+    transform-origin: 50% 100%;
+    background: var(--card-color);
+    clip-path: polygon(
+        0 3%,5% 0,10% 3%,15% 0,20% 3%,25% 0,30% 3%,35% 0,40% 3%,45% 0,
+        50% 3%,55% 0,60% 3%,65% 0,70% 3%,75% 0,80% 3%,85% 0,90% 3%,95% 0,
+        100% 3%,100% 100%,0 100%
+    );
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.1);
+    animation: hero-card-open 12s cubic-bezier(.6,0,.25,1) infinite both;
+    animation-delay: calc(var(--card-index) * .09s);
+}
+
+/* Subtle cross-hatch texture on each card */
+.hero-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .14;
+    background:
+        repeating-linear-gradient( 45deg, #000 0 1px, transparent 1px 5px),
+        repeating-linear-gradient(-45deg, #fff 0 1px, transparent 1px 5px);
+}
+
+@keyframes hero-card-open {
+    0%                { transform: rotate(-6deg); }
+    28%, 78%          { transform: rotate(var(--card-angle)); }
+    100%              { transform: rotate(-6deg); }
+}
+
+/* Running stitch SVG */
+.hero-stitch {
+    position: absolute;
+    left: 0;
+    bottom: 9%;
+    width: 100%;
+    height: 18%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.hero-stitch path {
+    fill: none;
+    stroke: #C9A23E;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 14 12;
+    animation: hero-stitch-run 3s linear infinite;
+}
+
+@keyframes hero-stitch-run {
+    to { stroke-dashoffset: -78; }
+}
+
+/* Cycling word headlines */
+.hero-word {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    white-space: nowrap;
+    animation: hero-word-cycle 12s infinite;
+}
+
+.hero-word:nth-child(1) { animation-delay: 0s; }
+.hero-word:nth-child(2) { animation-delay: 3.5s; }
+.hero-word:nth-child(3) { animation-delay: 7s; }
+
+@keyframes hero-word-cycle {
+    0%          { opacity: 0; transform: translateY(14px); }
+    6%, 24%     { opacity: 1; transform: translateY(0); }
+    30%, 100%   { opacity: 0; transform: translateY(-14px); }
+}
+
+/* Reduced-motion safety */
+@media (prefers-reduced-motion: reduce) {
+    .hero-card,
+    .hero-stitch path,
+    .hero-word {
+        animation: none !important;
+    }
+    .hero-card          { transform: rotate(var(--card-angle)); }
+    .hero-word:nth-child(1) { opacity: 1; transform: none; }
+}
